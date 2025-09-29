@@ -1,17 +1,3 @@
-#!/usr/bin/env python3
-"""Converted pipeline script from Compitition.ipynb
-
-Usage:
-    python competition_pipeline.py --train path/to/train.csv --test path/to/test.csv --output ULTIMATE_STRATEGY.csv
-
-This script is a cleaned, linearized version of the original notebook. It preserves preprocessing, feature engineering,
-model training (LightGBM), and the final "ultimate strategy" used to produce ULTIMATE_STRATEGY.csv.
-
-Notes:
-- Some notebook-specific commands (e.g., !pip install) have been converted to comments.
-- Paths to datasets are parameterized via CLI arguments.
-- Review and test before using in production. Ensure required packages are installed (see requirements.txt).
-"""
 
 # Standard imports
 import os
@@ -53,9 +39,6 @@ def parse_args():
     parser.add_argument('--seed', type=int, default=42, help='Random seed')
     return parser.parse_args()
 
-# --- Cell 0 ---
-# Cell 2: Import all libraries
-#  !pip install catboost
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -73,27 +56,14 @@ from catboost import CatBoostClassifier
 from imblearn.over_sampling import SMOTE
 import warnings
 
-# Basic settings
 warnings.filterwarnings('ignore')
 
-# Cell 1
 print('Libraries imported (from notebook snippet)')
 
-# --- Cell 1 ---
-# Cell 3: Load and explore data
 TRAIN_PATH_PLACEHOLDER
 TEST_PATH_PLACEHOLDER
 
 print("Training data shape:", )
-
-# --- Cell 2 ---
-# Quick helper functions and utility snippets from the notebook
-
-# --- Cell 3 ---
-# Handling possible multiple test files etc. (not executed here as-is)
-
-# --- Cell 4 ---
-# A number of data exploration and print statements were in the notebook. They are omitted here for brevity.
 
 # --- Cell 5 ---
 # Feature engineering & preprocessing functions (lightly adapted)
